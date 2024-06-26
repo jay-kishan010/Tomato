@@ -48,3 +48,18 @@ background-color: #fff4f2;
   padding-bottom: 2px;
  
 }
+
+
+.navbar-search-icon{
+    position: relative;
+}
+
+.navbar-search-icon .dot{
+    position: absolute;
+    min-height: 10px;
+    min-width: 10px;
+    background-color: tomato;
+    border-radius: 5px;
+top: -8px;
+right : -8px;
+}
