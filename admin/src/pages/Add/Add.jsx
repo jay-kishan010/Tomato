@@ -1,7 +1,9 @@
+import { useState } from "react";
 import { assets } from "../../assets/assets";
 import "./Add.css";
 
 const Add = () => {
+ const [image, setImage]=useState(false)
   return (
     <div className="add">
       <form className="flex-col">
@@ -10,7 +12,7 @@ const Add = () => {
           <label htmlFor="image">
             <img src={assets.upload_area} alt="" />
           </label>
-          <input type="file" name="" hidden required id="image" />
+          <input  onChange={(e)=>setImage(e.target.files[0])} type="file" name="" hidden required id="image" />
         </div>
         <div className="add-product-name flex-col">
           <p>Product Name</p>
