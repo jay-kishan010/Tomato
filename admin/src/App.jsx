@@ -8,6 +8,7 @@ import Order from "./pages/Order/Order"
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const App = () => {
+  const url="http://localhost:7000"
   return (
     <div>
     <ToastContainer/>
@@ -16,7 +17,7 @@ const App = () => {
       <div className="app-content">
         <Sidebar/>
         <Routes>
-<Route path="/add" element={<Add/>}/>
+<Route path="/add" element={<Add url={url}/>}/>
 <Route path="/list" element={<List/>}/>
 <Route path="/order" element={<Order/>}/>
         </Routes>
