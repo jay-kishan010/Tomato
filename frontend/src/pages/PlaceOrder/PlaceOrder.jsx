@@ -2,7 +2,7 @@ import { useContext } from "react"
 import "./PlaceOrder.css"
 import { StoreContext } from "../../context/StoreContext"
 const PlaceOrder = () => {
-  const {getTotalCartAmount} = useContext(StoreContext)
+  const {getTotalCartAmount,token, food_list, cartItems, } = useContext(StoreContext)
   return (
     <form  className="place-order">
       <div className="place-order-left">
