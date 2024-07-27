@@ -18,8 +18,8 @@ const App = () => {
         <Sidebar/>
         <Routes>
 <Route path="/add" element={<Add url={url}/>}/>
-<Route path="/list" element={<List/>}/>
-<Route path="/order" element={<Order/>}/>
+<Route path="/list" element={<List url={url}/>}/>
+<Route path="/order" element={<Order url={url}/>}/>
         </Routes>
       </div>
     </div>
