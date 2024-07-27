@@ -35,7 +35,7 @@ const navigate=useNavigate();
    :
    <div className="navbar-profile">
 <img src={assets.profile_icon} alt=""/>
-   <ul className="nav-profile-dropdown"><li>
+   <ul className="nav-profile-dropdown"><li onClick={()=>navigate('/myorders')}>
 <img src={assets.bag_icon} alt=""  />
 Orders
    </li>
