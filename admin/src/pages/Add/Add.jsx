@@ -30,7 +30,7 @@ const Add = ({url}) => {
     formData.append("image", image);
 
     const response = await axios.post(
-      `${url}/api/food/add/`,
+      `${url}/api/food/add`,
       formData
     );
     if (response.data.success) {

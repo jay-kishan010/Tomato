@@ -15,7 +15,6 @@ const placeOrder=async(req,res)=>{
         userId:req.body.userId,
         items:req.body.items,
         amount:req.body.amount,
-
         address:req.body.address,
     })
     await newOrder.save()
@@ -96,6 +95,7 @@ const listOrders=async(req,res)=>{
     res.json({success:true, data:orders})
   } catch (error) {
     console.log(error)
+    
     res.json({success:false, message:"Error"})
   }
 }

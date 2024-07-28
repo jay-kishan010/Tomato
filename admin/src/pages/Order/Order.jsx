@@ -5,14 +5,15 @@ import { toast } from "react-toastify";
 import { assets } from "../../assets/assets";
 const Order = ({url}) => {
   const [orders, setOrders] = useState([]);
-
-  const fetchAllOrders = async ({ url }) => {
+// console.log(url)
+  const fetchAllOrders = async () => {
     const response = await axios.get(url + "/api/order/list");
     if (response.data.success) {
       setOrders(response.data.data);
       console.log(response.data.data);
     } else {
       toast.error("Error");
+      
     }
   };
 
@@ -38,7 +39,9 @@ const Order = ({url}) => {
             <img src={assets.parcel_icon} alt="" />
             <div>
               <p className="order-item-food">
-                {order.items.map((item, index) => {
+                {
+                
+                  order.items.map((item, index) => {
                   if (index === order.items.length - 1) {
                     return item.name + " x " + item.quantity;
                   } else {
@@ -66,7 +69,7 @@ const Order = ({url}) => {
               </div>
               <p className="order-item-phone">{order.address.phone}</p>
             </div>
-            <p>Items:{order.item.length} </p>
+            <p>Items:{order.items.length} </p>
             <p>${order.amount}</p>
             <select onChange={(e)=>statusHandler(e,order._id)} value={order.status}>
               <option value="Food Processing">Food Processing</option>
