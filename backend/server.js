@@ -11,7 +11,7 @@ import orderRouter from "./routes/orderRoute.js"
 // app config 
 
 const app=express()
-const PORT=7000
+const port=process.env.PORT||7000
 
 // middleware 
 
@@ -35,6 +35,6 @@ app.get("/", (req,res)=>{
     res.send("hello from backend");
 })
 
-app.listen(PORT,()=>{
-    console.log(`server started on ${PORT}`);
+app.listen(port,()=>{
+    console.log(`server started on ${port}`);
 })
