@@ -46,8 +46,8 @@ const placeOrder=async(req,res)=>{
     const session=await stripe.checkout.sessions.create({
         line_items:line_items,
         mode:"payment",
-        success_url:`https://tomato-frontend2.onrender.com/verify?success=true&orderId=${newOrder._id}`,
-        cancel_url:`https://tomato-frontend2.onrender.com/verify?success=false&orderId=${newOrder._id}`
+        success_url:`https://tomato-frontend3.onrender.com/verify?success=true&orderId=${newOrder._id}`,
+        cancel_url:`https://tomato-frontend3.onrender.com/verify?success=false&orderId=${newOrder._id}`
     })
 
     res.json({success:true, session_url:session.url })
