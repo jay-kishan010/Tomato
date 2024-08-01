@@ -28,10 +28,10 @@ setData(data=>({...data,[name]:value}))
 e.preventDefault();
   let newUrl;
   if(currState==="Login"){
-    newUrl=`${url}/api/user/login`
+    newUrl=url+"/api/user/login"
   }
   else{
-    newUrl=`${url}/api/user/register`
+    newUrl=url+"/api/user/register"
   }
   try {
     const response=await axios.post(newUrl, data)
