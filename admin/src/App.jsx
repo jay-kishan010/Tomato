@@ -8,7 +8,7 @@ import Order from "./pages/Order/Order"
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const App = () => {
-  const url="http://localhost:7000"
+  const url="https://tomato-backend-zel0.onrender.com"
   return (
     <div>
     <ToastContainer/>
