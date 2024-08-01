@@ -6,7 +6,7 @@ import Stripe from "stripe"
 
 const stripe= new Stripe(process.env.STRIPE_SECRET_KEY)
 // placing user order for frontend 
-
+// const frontend_url="https://tomato-frontend1.onrender.com"
 const placeOrder=async(req,res)=>{
 
 
@@ -46,8 +46,8 @@ const placeOrder=async(req,res)=>{
     const session=await stripe.checkout.sessions.create({
         line_items:line_items,
         mode:"payment",
-        success_url:`http://localhost:5555/verify?success=true&orderId=${newOrder._id}`,
-        cancel_url:`http://localhost:5555/verify?success=false&orderId=${newOrder._id}`
+        success_url:`https://tomato-frontend1.onrender.com/verify?success=true&orderId=${newOrder._id}`,
+        cancel_url:`https://tomato-frontend1.onrender.com/verify?success=false&orderId=${newOrder._id}`
     })
 
     res.json({success:true, session_url:session.url })
