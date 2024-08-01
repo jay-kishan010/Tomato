@@ -9,7 +9,7 @@ const FoodItem = ({id,name,price,description,image}) => {
   return (
    <div className="food-item">
     <div className="food-item-img-container">
-        <img src={`http://localhost:7000/images/`+image} alt="" className="food-item-image" />
+        <img src={`https://tomato-backend-zel0.onrender.com/images/`+image} alt="" className="food-item-image" />
         {
             !cartItems[id]
 
